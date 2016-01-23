@@ -1,8 +1,8 @@
 @import "util";
 
-$image-front-background: image-url('card-front-background.png');
-$image-generic-front: image-url('products/generic-front.png');
-$image-generic-back: image-url('products/generic-back.png');
+$image-front-background: url('../images/card-front-background.png');
+$image-generic-front: url('../images/products/generic-front.png');
+$image-generic-back: url('../images/products/generic-back.png');
 
 $card-face-width: 24.8em;
 $card-face-height: 15.6em;
@@ -15,14 +15,14 @@ $sprite-front-height: 93.6em;
 
   .face.front {
     background-color: #eee;
-    background-image: image-url('products/generic-front.png'), $image-front-background;
+    background-image: url('../images/products/generic-front.png'), $image-front-background;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   .face.back {
     background-color: #eee;
-    background-image: image-url('products/generic-back.png');
+    background-image: url('../images/products/generic-back.png');
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -33,8 +33,8 @@ $sprite-front-height: 93.6em;
 
 
 
-  /*
-  1. If a field (or group) has focus, regardless of whether it's filled, the
+  /* 
+  1. If a field (or group) has focus, regardless of whether it's filled, the 
      inputs should look like inputs.
   2. Focused inputs within a focused field or group should look focused.
   3. An un-filled field should always look editable.
@@ -78,7 +78,7 @@ $sprite-front-height: 93.6em;
       @include vendor-prefix(box-shadow, inset 0px 0px 2px 1px $color-invalid);
       border: 1px solid $color-invalid;
     }
-
+    
     input:focus{
       @include vendor-prefix(box-shadow, none);
     }
@@ -89,7 +89,7 @@ $sprite-front-height: 93.6em;
       width: 1.575em;
       height: 1.25em;
       content: "";
-      background: image-url('error-pointer.png') no-repeat center center;
+      background: url('../images/error-pointer.png') no-repeat center center;
       background-size: 1.575em 1.25em;
       padding-left: 4px;
     }
@@ -98,7 +98,7 @@ $sprite-front-height: 93.6em;
 
   .cc-number{
     position: absolute;
-    display: block;
+    display: block; 
     left: 1.8em;
     top: 8.05em;
     padding: 0.1em;
@@ -117,8 +117,8 @@ $sprite-front-height: 93.6em;
   }
 
   .cc-exp {
-    position: absolute;
-    display: block;
+    position: absolute; 
+    display: block; 
     input, .separator {
       margin: 0; padding: 0;
       font-size: 1em;
@@ -132,8 +132,8 @@ $sprite-front-height: 93.6em;
 
   .cc-name {
     margin: 0; padding: 0;
-    position: absolute;
-    display: block;
+    position: absolute; 
+    display: block; 
     font-size: 1em;
     font-family: $cc-field-family;
     text-transform: uppercase;
@@ -141,8 +141,8 @@ $sprite-front-height: 93.6em;
 
   .cc-cvc {
     margin: 0; padding: 0;
-    position: absolute;
-    display: block;
+    position: absolute; 
+    display: block; 
     font-size: 1em;
     font-family: $cc-label-family;
   }
@@ -176,15 +176,15 @@ $sprite-front-height: 93.6em;
   @extend .skeuocard.card-product;
 
   .face.front{
-    background-image: image-url('products/visa-front.png'), $image-front-background;
+    background-image: url('../images/products/visa-front.png'), $image-front-background;
   }
 
   .face.back {
-    background-image: image-url('products/visa-back.png'), $image-generic-back;
+    background-image: url('../images/products/visa-back.png'), $image-generic-back;
   }
 
   .cc-number{
-    left: 1.8em;
+    left: 1.8em; 
     top: 8.05em;
   }
 
@@ -208,7 +208,7 @@ $sprite-front-height: 93.6em;
   // This card puts all required information on the back, rather than the front.
   &.issuer-chase-sapphire{
     .face.front{
-      background-image: image-url('issuers/visa-chase-sapphire.png');
+      background-image: url('../images/issuers/visa-chase-sapphire.png');
     }
     .cc-name{
       left: 1.25em;
@@ -231,7 +231,7 @@ $sprite-front-height: 93.6em;
     }
     .cc-exp{
       left: 3.75em;
-      top: 11.5em;
+      top: 11.5em; 
       input, .separator{
         font-family: $cc-label-family;
         &.group2{ width: 1.6em; }
@@ -253,14 +253,14 @@ $sprite-front-height: 93.6em;
   @extend .skeuocard.card-product;
 
   .face.front{
-    background-image: image-url('products/unionpay-front.png'), $image-front-background;
+    background-image: url('../images/products/unionpay-front.png'), $image-front-background;
   }
   .face.back {
-    background-image: image-url('products/visa-back.png'), $image-generic-back;
+    background-image: url('../images/products/visa-back.png'), $image-generic-back;
   }
 
   .cc-number{
-    left: 1.8em;
+    left: 1.8em; 
     top: 8.05em;
   }
 
@@ -289,10 +289,10 @@ $sprite-front-height: 93.6em;
   @extend .skeuocard.card-product;
 
   .face.front {
-    background-image: image-url('products/amex-front.png'), $image-front-background;
+    background-image: url('../images/products/amex-front.png'), $image-front-background;
   }
   .face.back{
-    background-image: image-url('products/visa-back.png'), $image-generic-back;
+    background-image: url('../images/products/visa-back.png'), $image-generic-back;
   }
 
   .cc-number{
@@ -324,10 +324,10 @@ $sprite-front-height: 93.6em;
   @extend .skeuocard.card-product;
 
   .face.front{
-    background-image: image-url('products/dinersclubintl-front.png'), $image-front-background;
+    background-image: url('../images/products/dinersclubintl-front.png'), $image-front-background;
   }
   .face.back{
-    background-image: image-url('products/visa-back.png'), $image-generic-back;
+    background-image: url('../images/products/visa-back.png'), $image-generic-back;
   }
   .cc-number{
     left: 1.8em;
@@ -355,10 +355,10 @@ $sprite-front-height: 93.6em;
   @extend .skeuocard.card-product;
 
   .face.front{
-    background-image: image-url('products/mastercard-front.png'), $image-front-background;
+    background-image: url('../images/products/mastercard-front.png'), $image-front-background;
   }
   .face.back{
-    background-image: image-url('products/visa-back.png'), $image-generic-back;
+    background-image: url('../images/products/visa-back.png'), $image-generic-back;
   }
 
   .cc-number{
@@ -390,10 +390,10 @@ $sprite-front-height: 93.6em;
   @extend .skeuocard.card-product;
 
   .face.front{
-    background-image: image-url('products/maestro-front.png'), $image-front-background;
+    background-image: url('../images/products/maestro-front.png'), $image-front-background;
   }
   .face.back{
-    background-image: image-url('products/visa-back.png'), $image-generic-back;
+    background-image: url('../images/products/visa-back.png'), $image-generic-back;
   }
 
   .cc-number{
@@ -425,11 +425,11 @@ $sprite-front-height: 93.6em;
   @extend .skeuocard.card-product;
 
   .face.front{
-    background-image: image-url('products/discover-front.png'), $image-front-background;
+    background-image: url('../images/products/discover-front.png'), $image-front-background;
   }
 
   .face.back{
-    background-image: image-url('products/visa-back.png'), $image-generic-back;
+    background-image: url('../images/products/visa-back.png'), $image-generic-back;
   }
 
   .cc-number{
@@ -461,11 +461,11 @@ $sprite-front-height: 93.6em;
   @extend .skeuocard.card-product;
 
   .face.front{
-    background-image: image-url('products/jcb-front.png'), $image-front-background;
+    background-image: url('../images/products/jcb-front.png'), $image-front-background;
   }
 
   .face.back{
-    background-image: image-url('products/visa-back.png'), $image-generic-back;
+    background-image: url('../images/products/visa-back.png'), $image-generic-back;
   }
 
   .cc-number{
@@ -493,12 +493,12 @@ $sprite-front-height: 93.6em;
 /* Preload face images */
 body:after{
     display:none;
-    content: image-url('products/visa-back.png') // most use this
-             image-url('products/visa-front.png')
-             image-url('products/unionpay-front.png')
-             image-url('products/amex-front.png')
-             image-url('products/discover-front.png')
-             image-url('products/mastercard-front.png')
-             image-url('products/dinersclubintl-front.png')
-             image-url('products/jcb-front.png');
+    content: url('../images/products/visa-back.png') // most use this
+             url('../images/products/visa-front.png') 
+             url('../images/products/unionpay-front.png') 
+             url('../images/products/amex-front.png') 
+             url('../images/products/discover-front.png') 
+             url('../images/products/mastercard-front.png') 
+             url('../images/products/dinersclubintl-front.png')
+             url('../images/products/jcb-front.png');
 }
